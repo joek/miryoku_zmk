@@ -1,0 +1,10 @@
+name: 'Build revxlp10u'
+on: workflow_dispatch
+jobs:
+  build:
+    uses: ./.github/workflows/main.yml
+    secrets: inherit
+    with:
+      board: '["seeeduino_xiao_ble"]'
+      shield: '["revxlp"]'
+      clipboard: '["mac"]'
