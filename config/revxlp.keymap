@@ -6,4 +6,4 @@
 #include "../miryoku/miryoku.dtsi"
 
 
-CONFIG_ZMK_USB_LOGGING=y
+#define CONFIG_ZMK_USB_LOGGING=y
