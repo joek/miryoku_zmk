@@ -6,8 +6,7 @@
 #define CONFIG_PWM y
 #define CONFIG_LED_PWM y
 
-#define config LED_GPIO
-    default y
+#define config LED_GPIO default y
 
 
 
