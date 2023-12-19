@@ -2,12 +2,11 @@
 // https://github.com/manna-harbour/miryoku
 
 #include <dt-bindings/pwm/pwm.h>
-CONFIG_ZMK_BACKLIGHT=y
+#define CONFIG_ZMK_BACKLIGHT=y
+#define CONFIG_PWM=y
+#define CONFIG_LED_PWM=y
 
-CONFIG_PWM=y
-CONFIG_LED_PWM=y
-
-config LED_GPIO
+#define config LED_GPIO
     default y
 
 
