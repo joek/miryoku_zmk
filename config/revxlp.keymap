@@ -4,6 +4,3 @@
 #include "../miryoku/custom_config.h"
 #include "../miryoku/mapping/42/corne.h"
 #include "../miryoku/miryoku.dtsi"
-
-
-#define CONFIG_ZMK_USB_LOGGING=y
