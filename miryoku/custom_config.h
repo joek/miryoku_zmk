@@ -1,16 +1,8 @@
 // Copyright 2021 Manna Harbour
 // https://github.com/manna-harbour/miryoku
 
-#include <dt-bindings/pwm/pwm.h>
 #include <dt-bindings/zmk/backlight.h>
 
-# define CONFIG_ZMK_USB_LOGGING=y
-
-#define CONFIG_ZMK_BACKLIGHT y
-#define CONFIG_PWM y
-#define CONFIG_LED_PWM y
-
-#define config LED_GPIO default y
 
 
 #define MIRYOKU_LAYER_MEDIA \
