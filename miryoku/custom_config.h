@@ -2,7 +2,6 @@
 // https://github.com/manna-harbour/miryoku
 
 #include <dt-bindings/pwm/pwm.h>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/backlight.h>
 
 # define CONFIG_ZMK_USB_LOGGING=y
