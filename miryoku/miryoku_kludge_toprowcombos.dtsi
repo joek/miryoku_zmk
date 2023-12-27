@@ -120,7 +120,7 @@ toprowcombos_ ## LAYER ## _ ## POSITION { \
   #elif defined (MIRYOKU_ALPHAS_QWERTZ)
     #error "Not implemented. See https://github.com/manna-harbour/miryoku/issues/56"
   #else
-    MIRYOKU_KLUDGE_TOPROWCOMBOS_MACRO(U_BASE, LEFTPINKIE, ac_ae) // ä
+    MIRYOKU_KLUDGE_TOPROWCOMBOS_MACRO(U_BASE, LEFTPINKIE, ac_agae) // ä
     MIRYOKU_KLUDGE_TOPROWCOMBOS_MACRO(U_BASE, LEFTINNERINDEX, &kp B) // oe
     MIRYOKU_KLUDGE_TOPROWCOMBOS_MACRO(U_BASE, RIGHTINNERINDEX, &kp J) // ue
     MIRYOKU_KLUDGE_TOPROWCOMBOS_MACRO(U_BASE, RIGHTPINKIE, &kp SQT) // ss
