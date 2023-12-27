@@ -3,8 +3,20 @@
 
 #include <dt-bindings/zmk/backlight.h>
 
+#define MIRYOKU_KLUDGE_TOPROWCOMBOS
 
 
+/ {
+    macros {
+        umlaut: umlaut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp   >;
+        };
+    };
+};
+
+MIRYOKU_KLUDGE_TOPROWCOMBOS_MACRO(U_BASE, LEFTPINKIE, &kp LA(U) &kp U)
 
 
 #define MIRYOKU_LAYER_MEDIA \
