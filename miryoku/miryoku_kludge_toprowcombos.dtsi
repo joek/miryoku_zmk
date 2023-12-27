@@ -2,8 +2,6 @@
 // https://github.com/manna-harbour/miryoku
 
 
-
-
 #define MIRYOKU_KLUDGE_TOPROWCOMBOS_TERM 50
 #define MIRYOKU_KLUDGE_TOPROWCOMBOS_MACRO(LAYER, POSITION, BINDING) \
 toprowcombos_ ## LAYER ## _ ## POSITION { \
@@ -12,59 +10,7 @@ toprowcombos_ ## LAYER ## _ ## POSITION { \
   bindings = <BINDING>; \
   timeout-ms = <MIRYOKU_KLUDGE_TOPROWCOMBOS_TERM>; \
 };
-#define ACCENTED_KEY(NAME, LABEL_U, LABEL_L, LABEL, KEY, DEAD_KEY) \
-  ac_##NAME##_l: ac_##NAME##_l { \
-      wait-ms = <0>; \
-      tap-ms = <0>; \
-      label = LABEL_L; \
-      compatible = "zmk,behavior-macro"; \
-      #binding-cells = <0>; \
-      bindings \
-          = <&macro_press &kp LALT> \
-          , <&macro_tap &kp DEAD_KEY> \
-          , <&macro_release &kp LALT> \
-          , <&macro_tap &kp KEY> \
-          ; \
-  }; \
-  ac_##NAME##_u: ac_##NAME##_u { \
-      wait-ms = <0>; \
-      tap-ms = <0>; \
-      label = LABEL_U; \
-      compatible = "zmk,behavior-macro"; \
-      #binding-cells = <0>; \
-      bindings \
-          = <&macro_release &kp LSHFT> \
-          , <&macro_press &kp LALT> \
-          , <&macro_tap &kp DEAD_KEY> \
-          , <&macro_release &kp LALT> \
-          , <&macro_press &kp LSHFT> \
-          , <&macro_tap &kp KEY> \
-          , <&macro_release &kp LSHFT> \
-          ; \
-  }; \
-  ac_##NAME: ac_##NAME { \
-      label = LABEL; \
-      compatible = "zmk,behavior-mod-morph"; \
-      #binding-cells = <0>; \
-      bindings = <&ac_##NAME##_l>, <&ac_##NAME##_u>; \
-      mods = <(MOD_LSFT|MOD_RSFT)>; \
-      keep-mods = <(MOD_LSFT|MOD_RSFT)>; \
-  };
 
-/ {
-    accents {
-        ACCENTED_KEY(agae, "ä", "Ä", "äÄ", A, U)
-        ACCENTED_KEY(aacu, "á", "Á", "áÁ", A, E)
-        ACCENTED_KEY(atil, "ã", "Ã", "ãÃ", A, N)
-        ACCENTED_KEY(acir, "â", "Â", "âÂ", A, I)
-        ACCENTED_KEY(eacu, "é", "É", "éÉ", E, E)
-        ACCENTED_KEY(ecir, "ê", "Ê", "êÊ", E, I)
-        ACCENTED_KEY(iacu, "í", "Í", "íÍ", I, E)
-        ACCENTED_KEY(oacu, "ó", "Ó", "óÓ", O, E)
-        ACCENTED_KEY(otil, "õ", "Õ", "õÕ", O, N)
-        ACCENTED_KEY(ocir, "ô", "Ô", "ôÔ", O, I)
-        ACCENTED_KEY(uacu, "ú", "Ú", "úÚ", U, E)
-    };
   combos {
     compatible = "zmk,combos";
 #if defined (MIRYOKU_LAYERS_FLIP)
