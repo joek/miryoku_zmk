@@ -1,6 +1,13 @@
 // Copyright 2022 Manna Harbour
 // https://github.com/manna-harbour/miryoku
 
+
+#define ZMK_UNICODE_PAIR(   de_ae,      N0, N0,  E, N4,    N0, N0,  C, N4)
+#define ZMK_UNICODE_PAIR(   de_oe,      N0, N0,  F, N6,    N0, N0,  D, N6)
+#define ZMK_UNICODE_PAIR(   de_ue,      N0, N0,  F,  C,    N0, N0,  D,  C)
+#define ZMK_UNICODE_PAIR(de_eszett,     N0, N0,  D,  F,    N1, E,   N9, E)
+
+
 #define MIRYOKU_KLUDGE_TOPROWCOMBOS_TERM 50
 #define MIRYOKU_KLUDGE_TOPROWCOMBOS_MACRO(LAYER, POSITION, BINDING) \
 toprowcombos_ ## LAYER ## _ ## POSITION { \
@@ -65,10 +72,10 @@ toprowcombos_ ## LAYER ## _ ## POSITION { \
   #elif defined (MIRYOKU_ALPHAS_QWERTZ)
     #error "Not implemented. See https://github.com/manna-harbour/miryoku/issues/56"
   #else
-    MIRYOKU_KLUDGE_TOPROWCOMBOS_MACRO(U_BASE, LEFTPINKIE, &kp Q)
-    MIRYOKU_KLUDGE_TOPROWCOMBOS_MACRO(U_BASE, LEFTINNERINDEX, &kp B)
-    MIRYOKU_KLUDGE_TOPROWCOMBOS_MACRO(U_BASE, RIGHTINNERINDEX, &kp J)
-    MIRYOKU_KLUDGE_TOPROWCOMBOS_MACRO(U_BASE, RIGHTPINKIE, &kp SQT)
+    MIRYOKU_KLUDGE_TOPROWCOMBOS_MACRO(U_BASE, LEFTPINKIE, &kp de_ae) // ä
+    MIRYOKU_KLUDGE_TOPROWCOMBOS_MACRO(U_BASE, LEFTINNERINDEX, &kp B) // oe
+    MIRYOKU_KLUDGE_TOPROWCOMBOS_MACRO(U_BASE, RIGHTINNERINDEX, &kp J) // ue
+    MIRYOKU_KLUDGE_TOPROWCOMBOS_MACRO(U_BASE, RIGHTPINKIE, &kp SQT) // ss
   #endif
   #if defined (MIRYOKU_NAV_INVERTEDT)
     #error "Not implemented. See https://github.com/manna-harbour/miryoku/issues/56"
