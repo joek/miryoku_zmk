@@ -6,18 +6,6 @@
 #define MIRYOKU_KLUDGE_TOPROWCOMBOS
 
 
-/ {
-    macros {
-        umlaut: umlaut {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp   >;
-        };
-    };
-};
-
-MIRYOKU_KLUDGE_TOPROWCOMBOS_MACRO(U_BASE, LEFTPINKIE, &kp LA(U) &kp U)
-
 
 #define MIRYOKU_LAYER_MEDIA \
 U_BOOT,            &u_to_U_TAP,       &u_to_U_EXTRA,     &u_to_U_BASE,      U_NA,              &bl BL_TOG,        &bl BL_CYCLE,          U_NA,              U_NA,              U_NA,         \
