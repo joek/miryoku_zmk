@@ -10,7 +10,7 @@ toprowcombos_ ## LAYER ## _ ## POSITION { \
   bindings = <BINDING>; \
   timeout-ms = <MIRYOKU_KLUDGE_TOPROWCOMBOS_TERM>; \
 };
-
+/ {
   combos {
     compatible = "zmk,combos";
 #if defined (MIRYOKU_LAYERS_FLIP)
