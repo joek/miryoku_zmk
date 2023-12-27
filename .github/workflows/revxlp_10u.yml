@@ -11,4 +11,3 @@ jobs:
       board: '["seeeduino_xiao_ble"]'
       shield: '["revxlp"]'
       clipboard: '["mac"]'
-      kconfig: '["CONFIG_ZMK_USB_LOGGING=y"]'
