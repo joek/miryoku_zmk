@@ -3,6 +3,8 @@
 
 #include "../zmk-nodefree-config/helper.h"
 #include "../zmk-nodefree-config/keypos_def/keypos_38keys.h"
+#include "../zmk-nodefree-config/international_chars/german.dtsi"
+
 #include <dt-bindings/zmk/backlight.h>
 
 #define MIRYOKU_KLUDGE_TOPROWCOMBOS
