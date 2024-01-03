@@ -1,5 +1,6 @@
 // Copyright 2022 Manna Harbour
 // https://github.com/manna-harbour/miryoku
+#include "../zmk-nodefree-config/international_chars/german.dtsi"
 
 
 #define MIRYOKU_KLUDGE_TOPROWCOMBOS_TERM 50
