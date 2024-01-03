@@ -5,6 +5,7 @@
 #include <dt-bindings/zmk/backlight.h>
 
 #define MIRYOKU_KLUDGE_TOPROWCOMBOS
+#define MIRYOKU_KLUDGE_BOTTOMROWCOMBOS
 
 
 
