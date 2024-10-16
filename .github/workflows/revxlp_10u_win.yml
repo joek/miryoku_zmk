@@ -1,0 +1,13 @@
+name: 'Build revxlp10u - win'
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  build:
+    uses: ./.github/workflows/main.yml
+    secrets: inherit
+    with:
+      board: '["seeeduino_xiao_ble"]'
+      shield: '["revxlp"]'
+      clipboard: '["win"]'
