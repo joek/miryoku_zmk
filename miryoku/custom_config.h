@@ -1,6 +1,6 @@
 // Copyright 2021 Manna Harbour
 // https://github.com/manna-harbour/miryoku
-#define HOST_OS 2
+#define HOST_OS 1
 #include "../zmk-nodefree-config/helper.h"
 #include <dt-bindings/zmk/backlight.h>
 
