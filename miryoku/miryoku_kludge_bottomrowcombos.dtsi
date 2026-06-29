@@ -3,6 +3,19 @@
 
 ZMK_UNICODE_SINGLE(euro_sign, N2, N0, A, C)  // €
 
+// Windows-Alt-Codes variant for runtime unicode switching on U_EXTRA.
+#undef OS_UNICODE_LEAD
+#undef OS_UNICODE_TRAIL
+#define OS_UNICODE_LEAD &macro_press &kp LALT
+#define OS_UNICODE_TRAIL &macro_release &kp LALT
+ZMK_UNICODE_SINGLE(euro_sign_win, KP_N0, KP_N1, KP_N2, KP_N8)  // €
+
+// Keep Linux unicode behavior as default for existing bindings.
+#undef OS_UNICODE_LEAD
+#undef OS_UNICODE_TRAIL
+#define OS_UNICODE_LEAD &macro_tap &kp LS(LC(U))
+#define OS_UNICODE_TRAIL &macro_tap &kp SPACE
+
 
 #define MIRYOKU_KLUDGE_BOTTOMROWCOMBOS_TERM 50
 #define MIRYOKU_KLUDGE_BOTTOMROWCOMBOS_MACRO(LAYER, POSITION, BINDING) \
@@ -69,6 +82,7 @@ bottomrowcombos_ ## LAYER ## _ ## POSITION { \
     #error "Not implemented. See https://github.com/manna-harbour/miryoku/issues/56"
   #else
     MIRYOKU_KLUDGE_BOTTOMROWCOMBOS_MACRO(U_BASE, LEFTPINKIE, &euro_sign)
+    MIRYOKU_KLUDGE_BOTTOMROWCOMBOS_MACRO(U_EXTRA, LEFTPINKIE, &euro_sign_win)
     MIRYOKU_KLUDGE_BOTTOMROWCOMBOS_MACRO(U_BASE, LEFTINNERINDEX, &kp V)
     MIRYOKU_KLUDGE_BOTTOMROWCOMBOS_MACRO(U_BASE, RIGHTINNERINDEX, &kp K)
     MIRYOKU_KLUDGE_BOTTOMROWCOMBOS_MACRO(U_BASE, RIGHTPINKIE, &lt U_BUTTON SLASH)
