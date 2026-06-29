@@ -11,3 +11,4 @@ jobs:
       board: '["xiao_ble"]'
       shield: '["revxlp"]'
       clipboard: '["win"]'
+      kconfig: '["CONFIG_ZMK_USB=y\nCONFIG_ZMK_USB_LOGGING=y"]'
